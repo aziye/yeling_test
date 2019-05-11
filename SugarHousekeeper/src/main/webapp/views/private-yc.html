@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>操作票列表(外操)</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" type="text/css" href="../public/jquery-easyui-1.5.2/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../public/jquery-easyui-1.5.2/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="../public/jquery-easyui-1.5.2/demo/demo.css">
+    <link rel="stylesheet" type="text/css" href="../uploads/selfCss/operation.css">
+    <script type="text/javascript" src="../public/jquery-easyui-1.5.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../public/jquery-easyui-1.5.2/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../public/jquery-easyui-1.5.2/locale/easyui-lang-zh_CN.js"></script>
+</head>
+<body style="background:#f3f3f3">
+    <!-- 下拉列表、时间控件、查询 -->
+    <div class="search clearfix">
+<!--       <div class="search-one">
+        <select class="easyui-combobox" name="state" style="width:120px;">
+            <option value="AL">铁路发油</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+        </select>
+      </div> -->
+      <div class="search-two">
+        <input class="easyui-datebox" name="birthday"     
+        data-options="required:true,showSeconds:false" value="3/4/2010 2:3" style="width:150px"> <span>~</span>
+        </div>
+       <div class="search-three">
+        <input class="easyui-datebox" name="birthday"     
+        data-options="required:true,showSeconds:false" value="3/4/2010 2:3" style="width:150px">
+      </div>
+      <div class="search-four">
+        <select class="easyui-combobox" name="state" style="width:120px;">
+            <option value="AL">已完成</option>
+            <option value="AK">待处理</option>
+         
+        </select>
+      </div>
+      <div class="search-five">
+        <button>查询</button>
+      </div> 
+    </div>
+    <!-- 新建 -->
+<!--     <div class="newly">
+      <ul class="newly-one">
+        <li><a href="#"></a>
+          <ul class="newly-two">
+            <li><a href="#">视频学习</a></li>
+            <li><a href="#">案例学习</a></li>
+            <li><a href="#">交流平台</a></li>
+            <li><a href="#">交流平台</a></li>
+            <li><a href="#">交流平台</a></li>
+            <li><a href="#">交流平台</a></li>
+            <li><a href="#">交流平台</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div> -->
+    <!-- 作业编号表格 -->
+    <div class="froms">
+          
+      <table class="easyui-datagrid" style="width:100%;"
+          data-options="singleSelect:true,collapsible:true,url:'datagrid_data1.json',method:'get'">
+        <thead>
+          <tr>
+            <th width="12%" data-options="field:'itemid',align:'center'" sortable="true">作业单号</th>
+            
+            <th width="12%" data-options="field:'productid',align:'center'" sortable="true">操作票单号</th>
+
+            <th width="12%" data-options="field:'listprice',align:'center'" sortable="true">操作票名称</th>
+
+            <th width="13%" data-options="field:'unitcost',align:'center'" sortable="true">下发人</th>
+
+
+            <th width="13%" data-options="field:'time',align:'center'" sortable="true">下发时间</th>
+
+            <th width="13%" data-options="field:'data',align:'center'" sortable="true">反馈时间</th>
+
+            <th width="13%" data-options="field:'fkpeople',align:'center'" sortable="true">反馈人</th>
+
+            <th width="14%" data-options="field:'status',align:'center'" sortable="true">状态</th>
+          </tr> 
+        </thead>
+        <tbody width="100%">
+        
+          <tr>
+            <td>TLF-20170505005</td>
+            <td>YC-004</td>
+            <td>外操-关流程</td>
+            <td>小李</td>
+            <td>20170524</td>
+            <td></td>
+            <td></td>
+            <td>待处理</td>
+          </tr>
+          <tr>
+            <td>TLF-20170505005</td>
+            <td>YC-003</td>
+            <td>外操-装车</td>
+            <td>张三</td>
+            <td>20170524</td>
+            <td></td>
+            <td></td>
+            <td>待处理</td>
+          </tr>
+          <tr>
+            <td>TLF-20170505005</td>
+            <td>YC-002</td>
+            <td>外操-开流程</td>
+            <td>张三</td>
+            <td>20170524</td>
+            <td>9:00</td>
+            <td>张老五</td>
+            <td>已完成</td>
+          </tr>
+          <tr>
+            <td>TLF-20170505005</td>
+            <td>YC-001</td>
+            <td>外操-验车</td>
+            <td>小李</td>
+            <td>20170524</td>
+            <td>9:00</td>
+            <td>李老五</td>
+            <td>已完成</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+        
+</body>
+<script type="text/javascript" src="../uploads/selfJs/private-yc.js"></script>
+</html>

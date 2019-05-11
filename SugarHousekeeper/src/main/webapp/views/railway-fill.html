@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>铁路装车操作票</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../public/jquery-easyui-1.5.2/themes/default/easyui.css">
+  <link rel="stylesheet" type="text/css" href="../../public/jquery-easyui-1.5.2/themes/icon.css">
+  <link rel="stylesheet" type="text/css" href="../public/jquery-easyui-1.5.2/demo/demo.css">
+  <link rel="stylesheet" href="../uploads/selfCss/base.css">
+  <link rel="stylesheet" href="../uploads/selfCss/railway-fill.css">
+</head>
+<body>
+   <!-- 头部开始 -->
+  <div class="header">
+    <div class="header-left">铁路装车操作票</div>
+    <!-- <div class="header-right">TLYC-20170506004</div> -->
+  </div>
+
+  <!-- content部分开始 -->
+
+  <div class="content clearfix">
+
+    <div class="content-left">
+      <form action="">
+
+        <div class="cont-nav">
+        <!-- <input id="nav-btnA" type="button" value="查看作业计划"> -->
+          <div class="nav-right">
+            <input id="nav-btnB" type="button" value="保存">
+            <input id="nav-btnC" type="button" value="提交">
+          </div>
+      </div>
+
+      <div class="cont-bottom">
+          <div class="bot-head">
+            <div class="bot-head-left">操作指令</div>
+            <div class="bot-head-right">
+              <div class="head-right-name">下发人 : 王立伟</div>
+              <div class="head-right-time">2017.05.05 10:00</div>
+            </div>
+          </div>
+          <div class="bot-foot">
+            <div class="bot-foot-left">例行说明</div>
+            <div class="bot-foot-right">
+              <textarea></textarea>
+            </div>
+            
+          </div>
+      </div>
+
+      <div class="cont-plan">
+        <div class="bot-head">
+            <div class="bot-head-left">执行</div>
+            <!-- <div class="bot-head-right">
+              <div class="head-right-name">下发人 : 王立伟</div>
+              <div class="head-right-time">2017.05.05 10:00</div>
+            </div> -->
+        </div>
+        
+        <div class="plan">
+            <div class="send">
+                  <span class="send-one">大庄:92#</span>
+                  <span class="send-two">2550t</span>
+                  <span class="send-three">孝感:0#</span>
+                  <span class="send-fore">550t</span>
+            </div>
+            <div class="p_content clearfix">
+              <div class="p_content-left">
+                <ul>
+                  <li class="plan-li">
+                    <i class="plan-id">1</i>
+                    <span class="plan-nub">6638618</span>
+                    <span class="plan-yy">92#</span>
+                    <span class="plan-dd">大庄库</span>
+                    <span class="plan-ss">70t</span>
+                    
+                    <input class="plan-ton" type="text" value="70t">
+                    
+                    
+                  </li>
+                  <li class="plan-li">
+                    <i class="plan-id">2</i>
+                    <span class="plan-nub">6638618</span>
+                    <span class="plan-yy">92#</span>
+                    <span class="plan-dd">大庄库</span>
+                    <span class="plan-ss">70t</span>
+                    
+                    <input class="plan-ton" type="text" value="70t">
+                  </li>
+                </ul>
+              </div>
+              <div class="p_content-center">
+                  <div class="p_content-center-text">1号</div>
+                  <div class="p_content-center-text">2号</div>
+              </div>
+              <div class="p_content-right">
+                <ul>
+                  <li class="plan-li">
+                    <i class="plan-id">3</i>
+                    <span class="plan-nub">6638618</span>
+                    <span class="plan-yy">92#</span>
+                    <span class="plan-dd">大庄库</span>
+                    <span class="plan-ss">70t</span>
+                    
+                    <input class="plan-ton" type="text" value="70t">
+                  </li>
+                  <li class="plan-li">
+                    <i class="plan-id">4</i>
+                    <span class="plan-nub">6638618</span>
+                    <span class="plan-yy">92#</span>
+                    <span class="plan-dd">大庄库</span>
+                    <span class="plan-ss">70t</span>
+                    
+                    <input class="plan-ton" type="text" value="70t">
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      </form>
+    </div>
+    
+    <div class="content-right clearfix">
+       <!-- 表格数据    -->
+      <div class="bdy-two clearfix">
+
+        <div class="natural-control">
+          <a href="monitor.html">资源监控</a>
+        </div>
+        <div class="natural-word">
+          <a href="a.html">作业计划</a>
+        </div>
+        <div class="clearfix">
+              <div class="natural-from1 clearfix">
+                    <table border="0" cellspacing="0">
+                      <thead>
+                        <tr>
+                          <th>到站</th>
+                          <th>油种</th>
+                          <th>计划</th>
+                          <th>实际</th>
+                        </tr> 
+                      </thead>
+                      <tbody width="100%">
+                        <tr>
+                          <td class="cell-c1-itemid">大庄</td>
+                          <td class="cell-c1-productid">92#</td>
+                          <td class="cell-c1-listprice">2500t</td>
+                          <td class="cell-c1-unitcost">2400t</td>
+                        </tr>
+                        <tr>
+                          <td class="cell-c1-itemid">孝感</td>
+                          <td class="cell-c1-productid">92#</td>
+                          <td class="cell-c1-listprice">2500t</td>
+                          <td class="cell-c1-unitcost">2400t</td>
+                        </tr>
+                      </tbody>
+                    </table>
+              </div>
+
+              <div class="natural-center">
+
+                  <div class="natural-center-name"><p>储罐安排</p></div>
+
+                  <div class="natural-from2">
+                     <table style="width: 100%" cellspacing="0">
+                     <thead>
+                        <tr>
+                          <th>罐号</th>
+                          <th>油种</th>
+                          <th>可发量</th>
+                        </tr> 
+                      </thead>
+                        <tbody>
+                          <tr>
+                            <td class="cell-c1-listprice">T1</td>
+                            <td class="cell-c1-productid">92#</td>
+                            <td class="cell-c1-unitcost">2500t</td>
+
+                          </tr>
+                          <tr>
+                            <td class="cell-c1-listprice">T2</td>
+                            <td class="cell-c1-productid">92#</td>
+                            <td class="cell-c1-unitcost">2500t</td>
+
+                          </tr>
+                          <tr>
+                           <td class="cell-c1-listprice">T100</td>
+                            <td class="cell-c1-productid">92#</td>
+                            <td class="cell-c1-unitcost">2500t</td>
+                          </tr>
+                      </tbody>
+                      </table>
+                  </div>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="../public/jquery-easyui-1.5.2/jquery.min.js"></script>
+<script type="text/javascript" src="../public/jquery-easyui-1.5.2/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../uploads/selfJs/railway-loaded.js"></script>
+
+</html>

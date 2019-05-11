@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        div {
+            width: 400px;
+            height: 300px;
+            margin: 10px auto;
+            overflow: hidden;
+            border: 1px solid yellowgreen;
+        }
+        ul {
+            height: 50px;
+        }
+        li {
+            float: left;
+            width: 80px;
+            height: 50px;
+            cursor: pointer;
+            text-align: center;
+            font: 500 25px/50px "simsun";
+            background-color: pink;
+        }
+        span {
+            display: none;
+            width: 400px;
+            height: 250px;
+            background-color: yellowgreen;
+            text-align: center;
+            font: 700 50px/250px "simsun";
+        }
+        .show {
+            display: block;
+        }
+        .current {
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <ul>
+            <li class="current">鞋子<button>×</button></li>
+            <li>袜子<button>×</button></li>
+            <li>裤子<button>×</button></li>
+            <li>帽子<button>×</button></li>
+            <li>裙子<button>×</button></li>
+        </ul>
+        <span class="show">鞋子区域</span>
+        <span>袜子区域</span>
+        <span>裤子区域</span>
+        <span>帽子区域</span>
+        <span>裙子区域</span>
+    </div>
+
+
+    <script>
+
+        //调用函数，让起作用的盒子作为参数传递进去。
+        var divArr = document.getElementsByClassName("box");
+
+        fn(divArr[0]);
+ 
+
+
+        //封装（缩小作用范围，需要的地方直接传递参数进行调用）
+        function fn(ele){
+            //1.获取事件源
+            var liArr = ele.getElementsByTagName("li");
+            var spArr = ele.getElementsByTagName("span");
+            var butArr = ele.getElementsByTagName("button");
+            //2.绑定事件(for循环绑定)
+            for(var i=0;i<liArr.length;i++){
+                liArr[i].index = i;
+                liArr[i].onmouseover = function () {
+                    for(var j=0;j<liArr.length;j++){
+                        liArr[j].className = "";
+                        spArr[j].className = "";
+                    }
+                    this.className = "current";
+                    spArr[this.index].className = "show";
+                }
+             
+            }
+            
+
+        }
+
+
+
+
+    </script>
+
+
+</body>
+</html>

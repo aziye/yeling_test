@@ -1,0 +1,112 @@
+body{
+  background-color:#F3F3F3;
+}
+/*.monitors{
+    width: 270px;
+    height: 82px;
+}*/
+.monitor{
+    margin:20px 0px 0px 13px;
+    float: left;
+
+
+}
+.monitor-top{
+  width: 270px;
+  height: 30px;
+  line-height: 30px;
+
+  /*background-color: #2958a3;*/
+}
+.monitor-top span{
+    color: #fbfefe;
+    font-size: 16px;
+}
+.monitor-bottom{
+  width: 270px;
+  height: 52px;
+  background-color: #ffffff;
+
+}
+.monitor-top .monitor-top-one{
+font-family: "Aril";
+padding-left: 10px;
+padding-right: 37px;
+font-size: 16px;
+}
+.monitor-top .monitor-top-two{
+font-family: "微软雅黑";
+
+padding-right: 42px;
+font-size: 14px;
+}
+.monitor-top .monitor-top-three{
+font-family: "微软雅黑";
+
+font-size: 16px;
+float: right;
+margin-right: 10px;
+
+
+}
+.monitor-bottom-picter{
+  float: left;
+}
+.monitor-bottom-picter img{
+  padding:6px 8px 0px 16px;
+}
+.monitor-data-one,.monitor-datas-one{
+  background-color: #00B5C5;
+  width: 34px;
+  height: 18px;
+  color: #fbfefe;
+  font-size: 12px;
+  text-align: center;
+  display: inline-block;
+  margin-top: 6px;
+  margin-right: 10px;
+}
+.monitor-data-two{
+  font-size: 14px;
+  color: #666666;
+  font-family: "Aril";
+  font-weight: bold;
+  padding-right: 10px;
+}
+.monitor-datas-two{
+    font-size: 14px;
+  color: #666666;
+  font-family: "Aril";
+  /*font-weight: bold;*/
+  padding-right: 20px;
+
+}
+.monitor-data-three{
+    font-size: 14px;
+  color: #666666;
+  font-family: "Aril";
+  font-weight: bold;
+
+}
+.monitor-datas-three{
+    font-size: 14px;
+  color: #666666;
+  font-family: "Aril";
+  /*font-weight: bold;*/
+}
+.monitor-times{
+  float: left;
+}
+.monitor-times-day{
+  display: inline-block;
+  height: 20px;
+  width: 40px;
+  text-align: center;
+  font-size: 10px;
+  color: #666666;
+  /*background-color: #d9d9d9;*/
+  margin:27px 6px 6px 25px;
+}
+.monitor-bottom-data{
+  float: left;
+}

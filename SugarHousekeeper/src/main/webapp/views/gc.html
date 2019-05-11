@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>铁路发油计量操作票</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../public/jquery-easyui-1.5.2/themes/default/easyui.css">
+  <link rel="stylesheet" type="text/css" href="../../public/jquery-easyui-1.5.2/themes/icon.css">
+  <link rel="stylesheet" type="text/css" href="../public/jquery-easyui-1.5.2/demo/demo.css">
+
+  <link rel="stylesheet" href="../uploads/selfCss/base.css">
+  <link rel="stylesheet" href="../uploads/selfCss/feedback.css">
+</head>
+  <style>
+    .easyui-linkbutton.foot-btnC {
+      margin-left: 5px;
+      width: 100px;
+      color: #ffffff;
+    }
+   .foot-btnC .l-btn-left {
+    width: 100px;
+   }
+  </style>
+<body>
+  <!-- 头部开始 -->
+  <div class="header">
+    <div class="header-left">铁路罐车计量操作票</div>
+    <div class="header-right">TLYC-20170506004</div>
+  </div>
+
+  <!-- 内容部分开始 -->
+  <form class="head-form" id="form1" disabled="disabled">
+    <div class="content">
+
+      <div class="cont-nav">
+        <a href="a.html"><input id="nav-btnA" type="button" value="查看作业计划"></a>
+        <div class="nav-right">
+          <input disabled="disabled" id="nav-btnB" type="button" value="保存">
+          <input disabled="disabled" id="nav-btnC" type="button" value="提交">
+        </div>
+      </div>
+
+      <div class="cont-bottom">
+          <div class="bot-head">
+            <div class="bot-head-left">操作指令</div>
+            <div class="bot-head-right">
+              <div class="head-right-name">下发人 : 王立伟</div>
+              <div class="head-right-time">2017.05.05 10:00</div>
+            </div>
+          </div>
+          <div class="bot-foot">
+            <div class="bot-foot-left">例行说明</div>
+            <div class="bot-foot-right">
+              <textarea></textarea>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+  </form>
+<!-- 底部开始 -->
+  <form action="" class="footer-form" id="form1">
+        <div class="footer">
+          <div class="footer-head">
+              <div class="footer-head-left">操作指令</div>
+              <div class="footer-head-right">
+                <div class="head-right-name">下发人 : 王立伟</div>
+                <div class="head-right-time">2017.05.05 10:00</div>
+              </div>
+          </div>
+     
+          <div class="footer-content">
+            <div class="footer-button">
+<!--               <input class="foot-btnA" type="button" value="新增">
+              <input class="foot-btnB" type="button" value="删除">
+              <input class="foot-btnC" type="button" value="接受"> -->
+
+              <div id="tb" style="height:auto">
+    <a href="javascript:void(0)" class="easyui-linkbutton foot-btnA" data-options="plain:true" onclick="append()">人工检尺</a>
+
+
+
+    <a href="javascript:void(0)" class="easyui-linkbutton foot-btnC" data-options="plain:true" onclick="accept()">自动获取</a>
+  </div>
+            </div>
+            <div class="footer-data">
+              
+              <table id="dg" class="easyui-datagrid"  style="width:100%;"
+      data-options="
+    
+        singleSelect: true, 
+        url: 'datagrid_data1.json',
+        method: 'get',
+        onClickCell: onClickCell,
+        onEndEdit: onEndEdit
+      ">
+                <thead>
+      <tr>
+        <th width="8.5%" data-options="field:'itdfgd'">车位号</th>
+        <th width="7%" data-options="field:'bear'">鹤位号</th>
+        <th width="9%" data-options="field:'bear1'">车号</th>
+        <th width="7%" data-options="field:'productid',
+           
+            editor:'textbox'">油种</th>
+        <th width="9%" data-options="field:'listprice',align:'center',editor:'textbox'">油水总高</th>
+        <th  width="7%" data-options="field:'unitcost',align:'center',editor:'textbox'">水高</th>
+        <th  width="7%" data-options="field:'attr1',align:'center',editor:'textbox'">油温</th>
+        <th  width="7%" data-options="field:'status',align:'center',editor:'textbox'">视温</th>
+        <th width="7%" data-options="field:'off',align:'center',editor:'textbox'">视密</th>
+        <th width="7%" data-options="field:'off1',align:'center',editor:'textbox'">铅封号</th>
+        <th width="7%" data-options="field:'off2',align:'center'">罐存量</th>
+        <th width="20%" data-options="field:'remark',align:'center',editor:'textbox'">备注</th>
+      </tr>
+    </thead>
+                <tbody>
+                  <tr class="footer-data-content">
+                    <td>1</td>
+                    <td>1</td>
+                    <td>6613029</td>
+                    <td>92#</td>
+                    <td>248</td>
+                    <td>2</td>
+                    <td>10</td>
+                    <td>750</td>
+                    <td>10</td>
+                    <td>21324</td>
+                    <td>60</td>
+                    
+                    <td></td>
+                  </tr>
+                    <tr class="footer-data-content">
+                    <td>2</td>
+                    <td>2</td>
+                    <td>6613030</td>
+                    <td>95#</td>
+                    <td>249</td>
+                    <td>3</td>
+                    <td>20</td>
+                    <td>730</td>
+                    <td>20</td>
+                    <td>21325</td>
+                    <td>50</td>
+                    
+                    <td></td>
+                  </tr>
+                  <tr class="footer-data-content">
+                    <td>3</td>
+                    <td>3</td>
+                    <td>6613031</td>
+                    <td>92#</td>
+                    <td>244</td>
+                    <td>2</td>
+                    <td>10</td>
+                    <td>740</td>
+                    <td>30</td>
+                    <td>21326</td>
+                    <td>70</td>
+                    
+                    <td></td>
+                  </tr>
+                  <tr class="footer-data-content">
+                    <td>4</td>
+                    <td>4</td>
+                    <td>6613032</td>
+                    <td>95#</td>
+                    <td>246</td>
+                    <td>4</td>
+                    <td>30</td>
+                    <td>745</td>
+                    <td>10</td>
+                    <td>21327</td>
+                    <td>50</td>
+                    
+                    <td></td>
+                  </tr>
+                  <tr class="footer-data-content">
+                     <td>5</td>
+                    <td>1</td>
+                    <td>6613033</td>
+                    <td>92#</td>
+                    <td>247</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>744</td>
+                    <td>30</td>
+                    <td>21328</td>
+                    <td>20</td>
+                    
+                    <td></td>
+                  </tr>
+                  <tr class="footer-data-content">
+                     <td>6</td>
+                    <td>2</td>
+                    <td>6613033</td>
+                    <td>92#</td>
+                    <td>256</td>
+                    <td>2</td>
+                    <td>10</td>
+                    <td>743</td>
+                    <td>20</td>
+                    <td>21328</td>
+                    <td>30</td>
+                    
+                    <td></td>
+                  </tr>
+                  <tr class="footer-data-content">
+                     <td>7</td>
+                    <td>3</td>
+                    <td>6613033</td>
+                    <td>92#</td>
+                    <td>230</td>
+                    <td>2</td>
+                    <td>10</td>
+                    <td>720</td>
+                    <td>20</td>
+                    <td>21328</td>
+                    <td>40</td>
+                    
+                    <td></td>
+                  </tr>
+                  <tr class="footer-data-content">
+                     <td>8</td>
+                    <td>4</td>
+                    <td>6613033</td>
+                    <td>95#</td>
+                    <td>220</td>
+                    <td>3</td>
+                    <td>20</td>
+                    <td>700</td>
+                    <td>50</td>
+                    <td>21328</td>
+                    <td>10</td>
+                    
+                    <td></td>
+                  </tr>
+                </tbody>
+            </table>
+
+
+            </div>
+          </div>
+        </div>
+  </form>
+
+  </div>
+
+
+
+
+
+
+</body>
+<script type="text/javascript" src="../public/jquery-easyui-1.5.2/jquery.min.js"></script>
+<script type="text/javascript" src="../public/jquery-easyui-1.5.2/jquery.easyui.min.js"></script>
+
+<script type="text/javascript" src="../uploads/selfJs/feedback.js"></script>
+</html>

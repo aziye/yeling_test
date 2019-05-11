@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>反馈页面</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../public/jquery-easyui-1.5.2/themes/default/easyui.css">
+  <link rel="stylesheet" type="text/css" href="../../public/jquery-easyui-1.5.2/themes/icon.css">
+  <link rel="stylesheet" type="text/css" href="../public/jquery-easyui-1.5.2/demo/demo.css">
+
+  <link rel="stylesheet" type="text/css" href="../public/jquery-easyui-1.5.2/themes/default/easyui.css">
+  <link rel="stylesheet" type="text/css" href="../public/jquery-easyui-1.5.2/themes/icon.css">
+  <link rel="stylesheet" href="../uploads/selfCss/base.css">
+  <link rel="stylesheet" href="../uploads/selfCss/feedback.css">
+</head>
+<body>
+  <!-- 头部开始 -->
+  <div class="header">
+    <div class="header-left">铁路发油验车操作票</div>
+    <div class="header-right">TLYC-20170506004</div>
+  </div>
+
+  <!-- 内容部分开始 -->
+  <form class="head-form">
+    <div class="content">
+
+      <div class="cont-nav">
+        <input id="nav-btnA" type="button" value="查看作业计划">
+        <div class="nav-right">
+          <input id="nav-btnB" type="button" value="保存">
+          <input id="nav-btnC" type="button" value="提交">
+        </div>
+      </div>
+
+      <div class="cont-bottom">
+          <div class="bot-head">
+            <div class="bot-head-left">操作指令</div>
+            <div class="bot-head-right">
+              <div class="head-right-name">下发人 : 王立伟</div>
+              <div class="head-right-time">2017.05.05 10:00</div>
+            </div>
+          </div>
+          <div class="bot-foot">
+            <div class="bot-foot-left">例行说明</div>
+            <div class="bot-foot-right">
+              <textarea></textarea>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+  </form>
+<!-- 底部开始 -->
+  <form action="" class="footer-form">
+        <div class="footer">
+          <div class="footer-head">
+              <div class="footer-head-left">执行情况</div>
+             <!--  <div class="footer-head-right">
+                <div class="head-right-name">填写人 : 王立伟</div>
+                <div class="head-right-time">2017.05.05 10:00</div>
+              </div> -->
+          </div>
+     
+          <div class="footer-content">
+            <div class="footer-button">
+<!--               <input class="foot-btnA" type="button" value="新增">
+              <input class="foot-btnB" type="button" value="删除">
+              <input class="foot-btnC" type="button" value="接受"> -->
+
+              <div id="tb" style="height:auto">
+    <a href="javascript:void(0)" class="easyui-linkbutton foot-btnA" data-options="plain:true" onclick="append()">新增</a>
+
+    <a href="javascript:void(0)" class="easyui-linkbutton foot-btnB" data-options="plain:true" onclick="removeit()">删除</a>
+
+    <a href="javascript:void(0)" class="easyui-linkbutton foot-btnC" data-options="plain:true" onclick="accept()">接受</a>
+  </div>
+            </div>
+            <div class="footer-data">
+              
+              <table id="dg" class="easyui-datagrid"  style="width:100%;"
+      data-options="
+    
+        singleSelect: true, 
+        url: 'datagrid_data1.json',
+        method: 'get',
+        onClickCell: onClickCell,
+        onEndEdit: onEndEdit
+      ">
+                <thead>
+                  <tr>
+                    <th width="8.5%" data-options="field:'itemid',align:'center',editor:{
+                    type:'combobox',
+                    options:{
+                    valueField:'productid',
+                    textField:'productname',
+                    method:'get',
+                    url:'products.json',
+                    required:true
+              }
+            }">车位号</th>
+
+                    <th width="7%"  data-options="field:'productid',align:'center',editor:'textbox'">车号</th>
+
+                    <th width="8.5%" data-options="field:'listprice',align:'center',editor:'textbox'">鹤位号</th>
+
+                    <th width="7%" data-options="field:'unitcost',align:'center',editor:'textbox'">表号</th>
+
+                    <th width="9%" data-options="field:'attr1',align:'center',editor:'textbox'">容量计表</th>
+
+                    <th width="7%" data-options="field:'status',align:'center',editor:'textbox'">容积</th>
+
+                    <th width="7%" data-options="field:'bear',align:'center',editor:'textbox'">载重</th>
+
+                    <th width="10%" data-options="field:'off',align:'center',editor:{type:'checkbox',options:{on:'Y',off:'N'}}">是否清洁</th>
+
+                    <th width="38%" data-options="field:'remark',align:'center',editor:'textbox'">备注</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="footer-data-content">
+                    <td>1</td>
+                    <td>66130029</td>
+                    <td>1</td>
+                    <td>CQ70</td>
+                    <td>KA-4248</td>
+                    <td>78.7</td>
+                    <td>70</td>
+                    <td>否<!-- <img class="footer-data-cutover" src="../images/on.png" alt=""> --></td>
+                    <td></td>
+                  </tr>
+                    <tr class="footer-data-content">
+                    <td>2</td>
+                    <td>66130028</td>
+                    <td>2</td>
+                    <td>CQ69</td>
+                    <td>KA-4249</td>
+                    <td>88.7</td>
+                    <td>60</td>
+                    <td>是<!-- <img class="footer-data-cutover" src="../images/off.png"> --></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+            </table>
+
+
+            </div>
+          </div>
+        </div>
+  </form>
+
+  </div>
+
+
+
+
+
+
+</body>
+<script type="text/javascript" src="../public/jquery-easyui-1.5.2/jquery.min.js"></script>
+<script type="text/javascript" src="../public/jquery-easyui-1.5.2/jquery.easyui.min.js"></script>
+
+<script type="text/javascript" src="../uploads/selfJs/feedback.js"></script>
+</html>

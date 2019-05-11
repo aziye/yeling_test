@@ -1,0 +1,413 @@
+body {
+  
+  width: 100%;
+  min-width: 865px;
+  background-color: #f3f3f3;
+}
+
+/*头部开始*/
+.header {
+  width: 100%;
+  background-color: #00A8DF;
+  box-sizing: border-box;
+  height: 20px;
+  margin-top: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #ffffff;
+  padding: 0 20px;
+}
+.header-left {
+float: left;
+}
+.header-right {
+float: right;
+}
+
+/*头部结束*/
+
+/*内容开始*/
+.content {
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 24px;
+  width: 100%;
+  min-width: 650px;
+  /*border: 1px solid #000;*/
+  position: relative;
+  font-size: 16px;
+}
+
+.content .content-left {
+  box-sizing: border-box;
+  min-width: 650px;
+  padding-right: 280px;
+}
+.cont-nav input {
+  color: #ffffff;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.nav-right {
+ /*float: left;*/
+}
+#nav-btnB {
+  height: 40px;
+  line-height: 40px;
+  width: 100px;
+  background-color: #2fcc80;
+  /*border-radius: 4px;*/
+  font-size: 14px;
+}
+
+.content .cont-top {
+  margin-top: 16px;
+  /*border-radius: 4px 4px 0 0;*/
+  width: 100%;
+  min-width: 564px;
+  background-color: #fff;
+  height: 500px;
+}
+
+.cont-top .cont-top-nav {
+  width: 100%;
+  height: 32px;
+  border-bottom: 1px solid #f3f3f3;
+}
+.cont-top .cont-top-nav input {
+  margin-top: 7px;
+  margin-left: 12px;
+  width: 80px;
+  height: 20px;
+  color: #bababa;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+.cont-top-nav input.btn-color {
+  color: #ffffff;
+  /*border-color: #01b5c4;*/
+  background-color: #00B5C6;
+}
+
+/*.cont-top .cont-top-nav input:hover {
+  color: #01b5c4;
+  border-color: #01b5c4;
+}*/
+.cont-top .cont-top-date {
+width: 100%;
+box-sizing: border-box;
+padding:0 12px;
+padding-top: 16px;
+}
+.cont-top-date .top-date-time {
+  font-size: 14px;
+  padding-bottom: 16px;
+}
+ .top-date-time .time-left {
+  width: 50%;
+  float: left;
+ }
+.top-date-time .time-right {
+  float: right;
+  width: 50%;
+ }
+/*内容部分结束*/
+/*时间*/
+.top-date-time .time-left p {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.top-date-time .time-right p {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.textbox {
+  width: 255px !important;
+  height: 32px;
+ text-align: center;
+
+ border: 1px solid #f3f3f3;
+ border-bottom: 2px solid #f3f3f3;
+}
+.textbox .textbox-text {
+  color: #666666;
+  text-align: left; 
+  font-size: 14px;
+  line-height: 28px;
+}
+.datebox .combo-arrow {
+  width: 40px !important;
+  background-color: #fff;
+  background-image:url(../../images/datebox_arrow1.png);
+}
+/*时间*/
+
+
+.cont-top-tabA {
+  width: 100%;
+  /*border-radius: 2px 2px 0 0;*/
+  overflow: hidden; 
+}
+.cont-top-tabA thead tr,
+.cont-top-tabB thead tr, 
+.cont-top-tabC thead tr {
+height: 32px;
+background-color: #f3f3f3;
+color: #666666;
+text-align: center;
+font-size: 14px;
+font-weight: bold;
+line-height: 32px;
+}
+.cont-top-tabBW {
+  border-right: 1px solid #fff; 
+}
+.cont-top-tabA tbody tr, 
+.cont-top-tabB tbody tr, 
+.cont-top-tabC tbody tr {
+  font-family: 'ragular';
+  font-size: 12px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #f3f3f3;
+  color: #666666;
+}
+#table-tdD {
+  font-weight: bold;
+}
+#table-tdA a {
+  color: #00a7e0;
+  text-decoration: underline;
+}
+.cont-top-tabB {
+  width: 100%;
+  /*border-radius: 2px 2px 0 0;*/
+  overflow: hidden; 
+}
+.cont-top-centA {
+  width: 100%;
+  margin-top: 24px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #666666;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #f3f3f3;
+  /*margin-top: 16px;*/
+}
+.cont-top-centB {
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.cont-top-centB textarea {
+  box-sizing: border-box;
+  margin-top: 8px;
+  width: 100%;
+  height: 80px;
+  border: 1px solid #f3f3f3;
+}
+
+.cont-bottom {
+  margin-top: 24px;
+  width: 100%;
+  /*border-radius: 4px 4px 0 0;*/
+  background-color: #fff;
+}
+.cont-top-centC {
+  height: 32px;
+   width: 100%;
+   box-sizing: border-box;
+   padding-left: 12px;
+  margin-top: 24px;
+  font-size: 14px;
+  line-height: 32px;
+  color: #666666;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #f3f3f3;
+}
+.cont-top-tabC {
+  box-sizing: border-box;
+  /*border-radius: 4px 4px 0 0;*/
+  overflow: hidden;
+  margin: 0 12px ;
+  margin-top: 16px;
+  
+}
+/*左侧部分*/
+.bdy{
+   /* width: 100%;
+    height: 100%;
+    background-color: red;*/
+    margin-top:10px;
+    /*position: relative;*/
+}
+.bdy-one{
+
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 325px;
+    /*height: 500px;*/
+    /*background-color: pink;*/
+    background-clip: content-box;
+    margin:10px 0px 0px 0px;
+    float: left;
+}
+.bdy-two{
+    position: absolute;
+    width: 260px;
+    margin:0px 0px 0px 0px;
+    right: 0px;
+    top: 0px;
+}
+.natural-control{
+    /*border-radius: 4px;*/
+    height: 45px;
+    text-align: center;
+    background-color: #00B5C6;
+}
+.natural-control a{
+  letter-spacing: 2px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 42px;
+  text-decoration: none;
+  }
+.natural-word{
+    height: 45px;
+    text-align: center;
+    background-color: #00B5C6;
+    margin-top: 20px;
+  }
+.natural-word a{
+
+  color: #fff;
+  font-size: 16px;
+  line-height: 45px;
+  text-decoration: none;
+  }
+.natural-from1,
+ .natural-from2,
+ .natural-from3 {
+    margin-top: 20px;
+    width: 260px;
+    /*border-radius: 4px 4px 0 0; */
+    overflow: hidden;
+}
+
+.natural-from1 thead tr {
+
+}
+.natural-from1 thead th {
+    width: 65px;
+    height: 40px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #285aa2;
+    font-weight: normal;
+}
+.natural-from1 tbody td {
+    height: 40px;
+    background-color: #fff;
+    text-align: center;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.natural-center {
+    width: 260px;
+    /*height: 164px;*/
+}
+.natural-center .natural-center-name {
+    height: 14px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 14px;
+    color: #666666;
+    background-color: #f3f3f3;
+}
+.natural-from2{
+    width: 260px;
+    /*height: 126px;*/
+    background-color: #fff;
+}
+.natural-from2 thead th {
+    width: 65px;
+    height: 40px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #4294D1;
+    font-weight: normal;
+}
+.natural-from2 tbody td {
+    width: 87px;
+    height: 40px;
+    text-align: center;
+     border-bottom: 1px solid #f3f3f3;
+} 
+
+.natural-from3{
+    width: 260px;
+    /*height: 126px;*/
+    background-color: #fff;
+}
+.natural-from3 thead th {
+    width: 65px;
+    height: 40px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #18a482;
+    font-weight: normal;
+}
+.natural-from3 tbody td {
+    width: 87px;
+    height: 40px;
+    text-align: center;
+     border-bottom: 1px solid #f3f3f3;
+} 
+
+
+
+
+/*表格样式开始*/
+
+td.cell-c1-itemid {
+  color: #666666;
+  font-size: 14px;
+  text-align: left;
+}
+
+ .cell-c1-productid {
+  color: #666666;
+  font-size: 14px;font-weight: bold;
+}
+ .cell-c1-listprice {
+  color: #666666;
+  font-size: 14px;
+  border-left: 1px solid #f3f3f3;
+  text-align: left;
+}
+ .cell-c1-unitcost {
+  color: #666666;
+  font-size: 14px;font-weight: bold;
+}
+}
+
+/*表格样式结束*/
+/*内容结束*/
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>作业单 时间轴</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" type="text/css" href="../public/jquery-easyui-1.5.2/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../public/jquery-easyui-1.5.2/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="../public/jquery-easyui-1.5.2/demo/demo.css">
+    <link rel="stylesheet" href="../uploads/selfCss/overview.css">
+ 
+     <script type="text/javascript" src="../public/jquery-easyui-1.5.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../public/jquery-easyui-1.5.2/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../public/jquery-easyui-1.5.2/jquery.easyui.min.js"></script>
+  
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<!-- 头 -->
+<div class="nav">
+    <div class="newly">
+          <ul class="newly-one">
+            <li class="new"><a href="#">外操</a>
+                <ul class="newly-two">
+                  <li><a href="down.html">验车</a></li>
+                  <li><a href="#">流程开启</a></li>
+                  <li><a href="railway-loaded.html">装车</a></li>
+                  <li><a href="#">流程关闭</a></li>
+                  <li><a href="#">储罐切换</a></li>
+                </ul>
+            </li>
+
+             <li class="new"><a href="#">计量</a>
+                <ul class="plan-two">
+                  <li><a href="gc.html">罐车计量</a></li>
+                  <li><a href="storage-down.html">储罐计量</a></li>
+              
+                </ul>
+            </li>
+
+             <li class="new"><a href="#">化验</a>
+                <ul class="assay-two">
+                  <li><a href="#">储罐化验</a></li>
+                
+                </ul>
+            </li>
+             <li><a href="#">配电</a>
+                <ul class="power-two">
+                  <li><a href="#">送电</a></li>
+                  <li><a href="#">断电</a></li>
+                </ul>
+            </li>
+            <li class="closed"><a href="#">关闭作业</a> 
+            </li>
+          </ul>
+    </div>
+    <!-- 结算调整 -->
+    <div class="settle">
+        <a href="zsdz.html">结算调整</a>
+    </div>
+<!-- 全部类型 -->
+    <div class="all clearfix">
+    <div class="all-one">
+        <select class="easyui-combobox" name="state" style="width:100px;height: 40px;">
+            <option value="AL">全部类型</option>
+            <option value="AK">外操</option>
+            <option value="AZ">计量</option>
+            <option value="AR">化验</option>
+            <option value="CA">配电</option>
+        </select>
+    </div>
+    <div class="all-two">
+        <select class="easyui-combobox" name="state" style="width:100px;height: 40px;">
+            <option value="AL">全部状态</option>
+            <option value="AK">未完成</option>
+            <option value="AZ">已完成</option>
+        </select>
+    </div>
+    <div class="all-three">
+       <button>查询</button>
+    </div>
+    </div>
+</div>
+
+<!-- 身 -->
+<div class="bdy">
+    <!-- 时间轴 -->
+    <div class="bdy-one">
+      <div class="paimai_list">
+
+        <div class="paimai_content">
+            <!-- 时间段1 -->
+            <div class="list_head">
+                  <div class="time_content">
+                      <em></em><br>
+                      <span class="ti">12:00</span>
+                      <span class="fon">-</span><br>
+                      <span class="tt">05.26</span>
+                  </div>
+                  <div class="clear"></div>
+            </div>
+            <div class="list_content"  data-add="0">
+              
+                <div class="chart">
+                   <img src="../images/chart2.png" alt="" class="chart-one" />
+                    <a href="gc.html"><img src="../images/chart1.png" alt="" class="chart-two" /></a>
+                </div>
+                <div class="chart-conter">
+                  <div class="chart-conter-one">
+                      <span>计量-罐车</span>
+                      <a href="#">删除</a>
+                  </div>
+                  <div class="chart-conter-two">
+                      <span class="chart-conter-z">JL-007</span>
+                      <span class="chart-conter-a">11:45 2017.05.26</span>
+                      <span class="chart-conter-b">~</span>
+                      <span class="chart-conter-c">11:45 2017.05.06</span>
+                  </div>
+                  <div class="chart-conter-three"><p>武汉库作业部计量人员，请在接到操作票后对铁路罐车开展收／发油计量操作并填写以下信息，操作完成并确认所填信息无误后请将操作票回传至油库调度</p><span>可编辑</span></div>
+                </div>
+            </div>
+            <div class="list_content"  data-add="0">
+              
+                <div class="chart">
+                   <img src="../images/chart2.png" alt="" class="chart-one" />
+                    <a href="storage-down.html"><img src="../images/chart1.png" alt="" class="chart-two" /></a>
+                </div>
+                <div class="chart-conter">
+                  <div class="chart-conter-one">
+                      <span>计量-储罐</span>
+                      <a href="#">删除</a>
+                  </div>
+                  <div class="chart-conter-two">
+                      <span class="chart-conter-z">JL-006</span>
+                      <span class="chart-conter-a">11:45 2017.05.26</span>
+                      <span class="chart-conter-b">~</span>
+                      <span class="chart-conter-c">11:45 2017.05.06</span>
+                  </div>
+                  <div class="chart-conter-three"><p>T1，92#，后尺</p><span>可编辑</span></div>
+                </div>
+            </div>
+            <div class="list_content"  data-add="2">
+              
+                <div class="chart">
+                   <img src="../images/chart2.png" alt="" class="chart-one" />
+                    <a href="storage.html"><img src="../images/chart1.png" alt="" class="chart-two" /></a>
+                </div>
+                <div class="chart-conter">
+                  <div class="chart-conter-one">
+                      <span>计量-储罐</span>
+                      <!-- <a href="#">删除</a> -->
+                  </div>
+                  <div class="chart-conter-two">
+                      <span class="chart-conter-z">JL-005</span>
+                      <span class="chart-conter-a">11:45 2017.05.26</span>
+                      <span class="chart-conter-b">~</span>
+                      <span class="chart-conter-c">11:45 2017.05.06</span>
+                  </div>
+                  <div class="chart-conter-three"><p>T1，92#，后尺</p><span>已反馈</span></div>
+                </div>
+            </div>
+
+            <div class="list_content"  data-add="1">
+              <div class="chart">
+                  <img src="../images/chart2.png" alt="" class="chart-one" />
+                  <a href="storage.html"><img src="../images/chart3.png" alt="" class="chart-two" /></a>
+              </div>
+              <div class="chart-conter">
+                  <div class="chart-conter-one">
+                      <span>化验</span>
+                      <!-- <a href="#">未反馈</a> -->
+                  </div>
+                  <div class="chart-conter-two">
+                      <span class="chart-conter-z">JL-006</span>
+                      <span class="chart-conter-a">11:45 2017.05.26</span>
+                      
+                  </div>
+                  <div class="chart-conter-three">
+                      <p>T1, 92#,后尺</p><span>未反馈</span>
+                  </div>
+              </div>
+            </div>
+
+
+          <!--时间段2-->
+            <div class="list_head">
+                  <div class="time_content">
+                      <em></em><br>
+                      <span class="ti">11:00</span>
+                      <span class="fon">-</span><br>
+                      <span class="tt">05.26</span>
+                  </div>
+                  <div class="clear"></div>
+            </div>
+            <div class="list_content" data-add="2">
+                <div class="chart">
+                    <img src="../images/chart2.png" alt="" class="chart-one" />
+                    <a href="storage.html"><img src="../images/chart4.png" alt="" class="chart-two" /></a>
+                </div>
+                <div class="chart-conter">
+                    <div class="chart-conter-one">
+                        <span>外操-关流程</span>
+                        <!-- <a href="#">已反馈</a> -->
+                    </div>
+                    <div class="chart-conter-two">
+                        <span class="chart-conter-z">YC-004</span>
+                        
+                        <span class="chart-conter-c">11:45 2017.05.06</span>
+                    </div>
+                    <div class="chart-conter-three">
+                        <p>铁路发，关流程，T1，92#，001</p>
+                        <span>已反馈</span>
+                    </div>
+                </div>
+            </div>
+            <div class="list_content" data-add="3">
+                <div class="chart">
+                  <img src="../images/chart2.png" alt="" class="chart-one" />
+                  <a href="storage.html"><img src="../images/chart5.png" alt="" class="chart-two" /></a>
+                </div>
+                <div class="chart-conter">
+                    <div class="chart-conter-one">
+                        <span>外操-装车</span>
+                        <!-- <a href="#">废止</a> -->
+                    </div>
+                    <div class="chart-conter-two">
+                        <span class="chart-conter-z">YC-003</span>
+                        <span class="chart-conter-c">11:45 2017.05.06</span>
+                    </div>
+                    <div class="chart-conter-three"><p> 武汉库作业部外操人员，请在接到操作票后按照装车方案对铁路罐车开展装车操作并填写实装量数据，装车操作完成并确认所填信息无误后请将操作票回传至油库调度。</p><span class="remove">废止</span></div>
+                </div>
+            </div>
+      
+          <!--时间段3-->
+            <div class="list_head">
+              <div class="time_content">
+                  <em></em><br>
+                  <span class="ti">10:00</span>
+                  <span class="fon">-</span><br>
+                  <span class="tt">05.26</span>
+              </div>
+              <div class="clear"></div>
+            </div>
+           
+            <div class="list_content" data-add="2">
+                <div class="chart">
+                    <img src="../images/chart2.png" alt="" class="chart-one" />
+                    <a href="storage.html"><img src="../images/chart4.png" alt="" class="chart-two" /></a>
+                </div>
+                <div class="chart-conter">
+                    <div class="chart-conter-one">
+                        <span>外操-开流程</span>
+                        <!-- <a href="#">已反馈</a> -->
+                    </div>
+                    <div class="chart-conter-two">
+                        <span class="chart-conter-z">YC-002</span>
+                        
+                        <span class="chart-conter-c">11:45 2017.05.06</span>
+                    </div>
+                    <div class="chart-conter-three">
+                        <p>铁路发，开流程，T1，92#，001</p>
+                        <span>已反馈</span>
+                    </div>
+                </div>
+            </div>
+            <div class="list_content" data-add="3">
+                <div class="chart">
+                  <img src="../images/chart2.png" alt="" class="chart-one" />
+                  <a href="storage.html"><img src="../images/chart5.png" alt="" class="chart-two" /></a>
+                </div>
+                <div class="chart-conter">
+                    <div class="chart-conter-one">
+                        <span>外操-验车</span>
+                        <!-- <a href="#">废止</a> -->
+                    </div>
+                    <div class="chart-conter-two">
+                        <span class="chart-conter-z">YC-003</span>
+                        <span class="chart-conter-c">11:45 2017.05.06</span>
+                    </div>
+                    <div class="chart-conter-three"><p> 武汉库作业部外操人员，请在接到操作票后按照装车方案对铁路罐车开展装车操作并填写实装量数据，装车操作完成并确认所填信息无误后请将操作票回传至油库调度。</p><span class="remove"></span></div>
+                </div>
+            </div>
+            <div class="list_content" data-add="3">
+                <div class="chart">
+                  <img src="../images/chart2.png" alt="" class="chart-one" />
+                  <a href="storage.html"><img src="../images/chart5.png" alt="" class="chart-two" /></a>
+                </div>
+                <div class="chart-conter">
+                    <div class="chart-conter-one">
+                        <span>外操-验车</span>
+                        <!-- <a href="#">废止</a> -->
+                    </div>
+                    <div class="chart-conter-two">
+                        <span class="chart-conter-z">YC-001</span>
+                        <span class="chart-conter-c">11:45 2017.05.06</span>
+                    </div>
+                    <div class="chart-conter-three"><p> 武汉库作业部外操人员，请在接到操作票后按照装车方案对铁路罐车开展装车操作并填写实装量数据，装车操作完成并确认所填信息无误后请将操作票回传至油库调度。</p><span class="remove"></span></div>
+                </div>
+            </div>
+            <div class="list_content" data-add="3">
+                <div class="chart">
+                  <img src="../images/chart2.png" alt="" class="chart-one" />
+                  <a href="storage.html"><img src="../images/chart5.png" alt="" class="chart-two" /></a>
+                </div>
+                <div class="chart-conter">
+                    <div class="chart-conter-one">
+                        <span>外操-验车</span>
+                        <!-- <a href="#">废止</a> -->
+                    </div>
+                    <div class="chart-conter-two">
+                        <span class="chart-conter-z">YC-001</span>
+                        <span class="chart-conter-c">11:45 2017.05.06</span>
+                    </div>
+                    <div class="chart-conter-three"><p> 武汉库作业部外操人员，请在接到操作票后按照装车方案对铁路罐车开展装车操作并填写实装量数据，装车操作完成并确认所填信息无误后请将操作票回传至油库调度。</p><span class="remove"></span></div>
+                </div>
+            </div>
+           
+            
+        </div> 
+
+      </div>
+    </div>
+    <!-- 表格数据    -->
+    <div class="bdy-two clearfix">
+
+      <div class="natural-control">
+        <a href="../views/monitor.html">资源监控</a>
+      </div>
+      <div class="natural-word">
+        <a href="a.html">作业计划</a>
+      </div>
+      <div class="clearfix">
+            <div class="natural-from1">
+                  <table border="0" cellspacing="0">
+                    <thead>
+                      <tr>
+                        <th>到站</th>
+                        <th>油种</th>
+                        <th>计划</th>
+                        <th>实际</th>
+                      </tr> 
+                    </thead>
+                    <tbody width="100%">
+                      <tr>
+                        <td rowspan="2" class="cell-c1-itemid" style="line-height: 40px">成<br>都</td>
+                        <td class="cell-c1-productid">92#</td>
+                        <td class="cell-c1-listprice">2500t</td>
+                        <td class="cell-c1-unitcost">2400t</td>
+                      </tr>
+                      <tr>
+                     
+                        <td class="cell-c1-productid">95#</td>
+                        <td class="cell-c1-listprice">2500t</td>
+                        <td class="cell-c1-unitcost">2400t</td>
+                      </tr>
+                      <tr>
+                        <td class="cell-c1-itemid">达州</td>
+                        <td class="cell-c1-productid">92#</td>
+                        <td class="cell-c1-listprice">2500t</td>
+                        <td class="cell-c1-unitcost">2400t</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+
+            <div class="natural-center">
+
+                <div class="natural-center-name"><p>储罐安排</p></div>
+
+                <div class="natural-from2">
+                   <table style="width: 100%" cellspacing="0">
+                   <thead>
+                      <tr>
+                        <th>罐号</th>
+                        <th>计划</th>
+                        <th>可发量</th>
+                      </tr> 
+                    </thead>
+                      <tbody>
+                        <tr>
+                          <td class="cell-c1-listprice">T1</td>
+                          <td class="cell-c1-productid">2500t</td>
+                          <td class="cell-c1-unitcost">2500t</td>
+
+                        </tr>
+                        <tr>
+                          <td class="cell-c1-listprice">T2</td>
+                          <td class="cell-c1-productid">2500t</td>
+                          <td class="cell-c1-unitcost">2500t</td>
+
+                        </tr>
+                        <tr>
+                         <td class="cell-c1-listprice">T10</td>
+                          <td class="cell-c1-productid">2500t</td>
+                          <td class="cell-c1-unitcost">2500t</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+      </div>
+      <div class="natural-word">
+        <a href="#">装车方案</a>
+      </div>
+    </div>
+</div>
+
+
+    <script src="../uploads/selfJs/overview.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+html{height: 100%;}
+* {
+  padding: 0;
+  margin: 0;
+}
+body{
+      margin: 0;
+      height: 100%;
+      background: url(../../images/login.jpg) center ;
+      /*background-size: cover;*/
+      /*opacity: 0.5;*/
+      /*position: absolute;*/
+      min-width: 1024px;
+    }
+
+canvas{display: block;width: 100%;height: 100%;}
+
+.L-header{
+  position: absolute;
+  margin-left: 50%;
+  left: -144px;
+  top: 170px;
+
+}
+.header-first {
+  width: 288px;
+  color: #fbfefe;
+  text-align: center;
+  font-size: 30px;
+  font-family: "幼圆";
+  letter-spacing:3px;
+}
+
+.header-last {
+text-align: center;
+width: 288px;
+height: 30px;
+}
+.header-last p {
+
+  display: block;
+  float: left;
+  height: 30px;
+  font-family: "幼圆";
+  font-size: 30px;
+  line-height: 30px;
+  color: #fbfefe;
+  font-weight: 800;
+  letter-spacing:4px;
+  padding-left: 57px;
+}
+#header-num {
+  height: 26px;
+  width: 65px;
+  float: left;
+  margin-top: 4px;
+  background: url(../../images/login-k.png) no-repeat;
+  background-size: contain;
+  font-size: 22px;
+  line-height: 30px;
+  font-family: "Arial";
+  color: #143c5f;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing:4px;
+  padding-left: 1px;
+}
+
+
+.L-content {
+  position: absolute;
+  margin-left: 50%;
+  left: -144px;
+  top: 256px;
+}
+
+#l-from input {
+  height: 34px;
+  outline-style: none;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  border: 0;
+}
+.from-login {
+  width: 278px;
+  color: #666666;
+  background-color: #f3f3f3;
+}
+.from-yz {
+  color: #666666;
+  width: 160px;
+  background-color: #f3f3f3;
+}
+.from-yz-span {
+  display: inline-block;
+/*float: left;*/
+  height: 34px;
+  width: 110px;
+  background-color: #f3f3f3;
+  vertical-align: bottom;
+  margin-bottom: 20px;
+  margin-left: 4px;
+}
+.from-submit {
+  width: 288px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  letter-spacing:6px;
+  color: #fbfefe;
+  background-color: #f2a941;
+}
+
+#from-pointA {
+  float: right;
+  position: relative;
+  width: 145px;
+  height: 34px;
+  right: 154px;
+  background-color: #f3f3f3;
+  vertical-align: middle;
+  color: #a24b4b;
+  text-align: right;
+  padding-right: 5px;
+  line-height: 34px;
+}
+
+#from-pointB {
+  float: right;
+  position: relative;
+  width: 145px;
+  height: 34px;
+  right: 154px;
+  background-color: #f3f3f3;
+  vertical-align: middle;
+  color: #a24b4b;
+  text-align: right;
+  padding-right: 5px;
+  line-height: 34px;
+}
+
+
+
+
+
+
+
+

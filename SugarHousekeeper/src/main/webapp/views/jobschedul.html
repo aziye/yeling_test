@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>总览</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" type="text/css" href="../public/jquery-easyui-1.5.2/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../public/jquery-easyui-1.5.2/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="../public/jquery-easyui-1.5.2/demo/demo.css">
+    <link rel="stylesheet" type="text/css" href="../uploads/selfCss/jobschedul.css">
+    <link rel="stylesheet" href="../uploads/selfCss/tab.css">
+ 
+    <link rel="stylesheet" type="text/css" href="../public/jQuery-easyui-1.5.2/themes/color.css">
+   
+   
+    <script type="text/javascript" src="../public/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="../public/jquery-easyui-1.5.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../public/jquery-easyui-1.5.2/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../public/jquery-easyui-1.5.2/locale/easyui-lang-zh_CN.js"></script>
+
+ <!-- [if lte ie 8]>
+    <script src="html5shiv.min.js"></script>
+  <![endif]-->
+</head>
+
+<body style="background:#f3f3f3">
+    <!-- 下拉列表、时间控件、查询 -->
+    <div class="search clearfix">
+      <div class="search-one">
+        <select class="easyui-combobox" name="state" style="width:120px;">
+            <option value="AL">铁路发油</option>
+            <option value="AK">铁路收油</option>
+            <option value="AZ">水路发油</option>
+            <option value="AR">水路收油</option>
+            <option value="AL">管输发油</option>
+            <option value="AK">管输收油</option>
+            <option value="AZ">公路发油</option>
+            <option value="AR">公路收油</option>
+            <option value="AR">排污</option>
+            <option value="AR">切水</option>
+            <option value="AR">倒罐</option>
+            <option value="AR">清罐</option>
+        </select>
+      </div>
+      <div class="search-two">
+        <input class="easyui-datebox" name="birthday"     
+        data-options="required:true,showSeconds:false" value="3/4/2010 2:3" style="width:150px"> <span>~</span>
+        </div>
+       <div class="search-three">
+        <input class="easyui-datebox" name="birthday"     
+        data-options="required:true,showSeconds:false" value="3/4/2010 2:3" style="width:150px">
+      </div>
+      <div class="search-four">
+        <select class="easyui-combobox" name="state" style="width:120px;">
+            <option value="AL">正在作业</option>
+            <option value="AK">已完成</option>
+            
+        </select>
+      </div>
+      <div class="search-five">
+        <button>查询</button>
+      </div> 
+    </div>
+    <!-- 新建 -->
+ <!--    <div class="newly">
+      <ul class="newly-one">
+          <li><a href="#">新建</a>
+            <ul class="newly-two">
+              <li><a href="#">视频学习</a></li>
+              <li><a href="#">案例学习</a></li>
+              <li><a href="#">交流平台</a></li>
+              <li><a href="#">交流平台</a></li>
+              <li><a href="#">交流平台</a></li>
+              <li><a href="#">交流平台</a></li>
+              <li><a href="#">交流平台</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div> -->
+    <!-- 总览图标 -->
+    <div class="zl-line clearfix">
+        <!-- 左 -->
+        <div class="clearfix">
+       <div class="zl-line-left talk">
+          <div class="zl-line-img">
+            <img src="../images/glf.png" alt="">
+            <span>收</span>
+          </div>
+          <div class="zl-line-zi">报 告
+          <img src="../images/q.png" alt="">
+          </div>
+       </div>
+
+        <!-- 点击使用 -->
+        <!-- 中 -->
+                <a href="overview.html">
+                 <div class="zl-line-middle">
+                   <p class="zl-line-middle-one">GLS-2017052401</p>
+                   <p class="zl-line-middle-two">2017.05.06-2017.05.08</p>
+                   <span class="zl-line-middle-three">乙醇</span>
+                   <span class="zl-line-middle-four">500t</span>
+                 </div>
+                 <!-- 右 --> 
+
+                 <div class="zl-line-right">
+                
+                    <ul>
+                      <li class="z-right" data-name="0">计 划</li> <span>&gt;</span> 
+                      
+                      <li class="z-right" data-name="2">开流程</li> <span>&gt;</span>
+                      <li class="z-right"  data-name="2">卸车</li> <span>&gt;</span>
+
+                      <li class="z-right"  data-name="2">关流程</li> <span>&gt;</span>
+                      <li class="z-right"  data-name="2">计量化</li> <span>&gt;</span> 
+                      <li class="z-right line-last-li"  data-node="1" id="zl-line-right-eighth"></li>
+                    </ul>
+                   
+                 </div> 
+                 </div></a>
+        <div class="zl-line-bottom">
+          <img src="../images/baogao.jpg" alt="">
+        </div>
+    </div>
+    <div class="zl-line clearfix">
+        <!-- 左 -->
+        <div class="clearfix">
+       <div class="zl-line-left talk">
+          <div class="zl-line-img">
+            <img src="../images/glf.png" alt="">
+            <span>发</span>
+          </div>
+          <div class="zl-line-zi">报 告
+          <img src="../images/q.png" alt="">
+          </div>
+       </div>
+
+        <!-- 点击使用 -->
+        <!-- 中 -->
+                <a href="overview.html">
+                 <div class="zl-line-middle">
+                   <p class="zl-line-middle-one">GLF-2017052401</p>
+                   <p class="zl-line-middle-two">2017.05.06-2017.05.08</p>
+                   <span class="zl-line-middle-three">92#</span>
+                   <span class="zl-line-middle-four">300t</span>
+                 </div>
+                 <!-- 右 --> 
+
+                 <div class="zl-line-right">
+                
+                    <ul>
+                      <li class="z-right" data-name="0">计 划</li> <span>&gt;</span> 
+                      
+                      <li class="z-right" data-name="0">开流程</li> <span>&gt;</span>
+                      <li class="z-right"  data-name="2">发货</li> <span>&gt;</span>
+
+                      <li class="z-right"  data-name="2">关流程</li> <span>&gt;</span>
+                      <li class="z-right"  data-name="2">计量化验</li> <span>&gt;</span> 
+                      <li class="z-right line-last-li"  data-node="1" id="zl-line-right-eighth"></li>
+                    </ul>
+                   
+                 </div> 
+                 </div></a>
+        <div class="zl-line-bottom">
+          <img src="../images/baogao.jpg" alt="">
+        </div>
+    </div>
+    <div class="zl-line clearfix">
+        <!-- 左 -->
+        <div class="clearfix">
+       <div class="zl-line-left talk">
+          <div class="zl-line-img">
+            <img src="../images/tlf.png" alt="">
+            <span>收</span>
+          </div>
+          <div class="zl-line-zi">报 告
+          <img src="../images/q.png" alt="">
+          </div>
+       </div>
+
+        <!-- 点击使用 -->
+        <!-- 中 -->
+                <a href="overview.html">
+                 <div class="zl-line-middle">
+                   <p class="zl-line-middle-one">TLS-2017052401</p>
+                   <p class="zl-line-middle-two">2017.05.06-2017.05.08</p>
+                   <span class="zl-line-middle-three">92#,95#</span>
+                   <span class="zl-line-middle-four">500t</span>
+                 </div>
+                 <!-- 右 --> 
+
+                 <div class="zl-line-right">
+                
+                    <ul>
+                      <li class="z-right" data-name="0">计 划</li> <span>&gt;</span> 
+                      <li class="z-right" data-name="1">验 车</li> <span>&gt;</span> 
+                      <li class="z-right" data-name="2">计量化验</li> <span>&gt;</span> 
+                      <li class="z-right" data-name="2">开流程</li> <span>&gt;</span>
+                      <li class="z-right"  data-name="2">卸车</li> <span>&gt;</span>
+
+                      <li class="z-right"  data-name="2">关流程</li> <span>&gt;</span>
+                      <li class="z-right"  data-name="2">计量化</li> <span>&gt;</span> 
+                      <li class="z-right" data-name="2">计量化验</li> <span>&gt;</span> 
+                      <li class="z-right line-last-li"  data-node="1" id="zl-line-right-eighth"></li>
+                    </ul>
+                   
+                 </div> 
+                 </div></a>
+        <div class="zl-line-bottom">
+          <img src="../images/baogao.jpg" alt="">
+        </div>
+    </div>
+     <div class="zl-line clearfix">
+        <!-- 左 -->
+        <div class="clearfix">
+       <div class="zl-line-left talk">
+          <div class="zl-line-img">
+            <img src="../images/tlf.png" alt="">
+            <span>发</span>
+          </div>
+          <div class="zl-line-zi">报 告
+          <img src="../images/q.png" alt="">
+          </div>
+       </div>
+
+        <!-- 点击使用 -->
+        <!-- 中 -->
+                <a href="overview.html">
+                 <div class="zl-line-middle">
+                   <p class="zl-line-middle-one">TLF-2017052401</p>
+                   <p class="zl-line-middle-two">2017.05.06-2017.05.08</p>
+                   <span class="zl-line-middle-three">92#,95#</span>
+                   <span class="zl-line-middle-four">500t</span>
+                 </div>
+                 <!-- 右 --> 
+
+                 <div class="zl-line-right">
+                
+                    <ul>
+                      <li class="z-right" data-name="0">计 划</li> <span>&gt;</span> 
+                      <li class="z-right" data-name="0">验 车</li> <span>&gt;</span>
+                      <li class="z-right" data-name="0">开流程</li> <span>&gt;</span>
+                      <li class="z-right"  data-name="0">装车</li> <span>&gt;</span>
+
+                      <li class="z-right"  data-name="0">关流程</li> <span>&gt;</span> 
+                      <li class="z-right" data-name="0">计量化验</li> <span>&gt;</span> 
+                      <li class="z-right line-last-li"  data-node="2" id="zl-line-right-eighth"></li>
+                    </ul>
+                   
+                 </div> 
+                 </div></a>
+        <div class="zl-line-bottom">
+          <img src="../images/baogao.jpg" alt="">
+        </div>
+    </div>
+    <div class="zl-line clearfix">
+        <!-- 左 -->
+        <div class="clearfix">
+       <div class="zl-line-left talk">
+          <div class="zl-line-img">
+            <img src="../images/slf.png" alt="">
+            <span>收</span>
+          </div>
+          <div class="zl-line-zi">报 告
+          <img src="../images/q.png" alt="">
+          </div>
+       </div>
+
+        <!-- 点击使用 -->
+        <!-- 中 -->
+                <a href="overview.html">
+                 <div class="zl-line-middle">
+                   <p class="zl-line-middle-one">SLS-2017052401</p>
+                   <p class="zl-line-middle-two">2017.05.06-2017.05.08</p>
+                   <span class="zl-line-middle-three">92#,95#</span>
+                   <span class="zl-line-middle-four">500t</span>
+                 </div>
+                 <!-- 右 --> 
+
+                 <div class="zl-line-right">
+                
+                    <ul>
+                      <li class="z-right" data-name="0">计 划</li> <span>&gt;</span> 
+                      <li class="z-right" data-name="1">验 车</li> <span>&gt;</span>
+                      <li class="z-right" data-name="2">计量化验</li> <span>&gt;</span> 
+                      <li class="z-right" data-name="2">开流程</li> <span>&gt;</span>
+                      <li class="z-right"  data-name="2">卸船</li> <span>&gt;</span>
+
+                      <li class="z-right"  data-name="2">关流程</li> <span>&gt;</span> 
+                      <li class="z-right" data-name="2">计量化验</li> <span>&gt;</span> 
+                      <li class="z-right line-last-li"  data-node="1" id="zl-line-right-eighth"></li>
+                    </ul>
+                   
+                 </div> 
+                 </div></a>
+        <div class="zl-line-bottom">
+          <img src="../images/baogao.jpg" alt="">
+        </div>
+    </div>
+    <div class="zl-line clearfix">
+        <!-- 左 -->
+        <div class="clearfix">
+       <div class="zl-line-left talk">
+          <div class="zl-line-img">
+            <img src="../images/slf.png" alt="">
+            <span>发</span>
+          </div>
+          <div class="zl-line-zi">报 告
+          <img src="../images/q.png" alt="">
+          </div>
+       </div>
+
+        <!-- 点击使用 -->
+        <!-- 中 -->
+                <a href="overview.html">
+                 <div class="zl-line-middle">
+                   <p class="zl-line-middle-one">SLF-2017052401</p>
+                   <p class="zl-line-middle-two">2017.05.06-2017.05.08</p>
+                   <span class="zl-line-middle-three">92#,95#</span>
+                   <span class="zl-line-middle-four">500t</span>
+                 </div>
+                 <!-- 右 --> 
+
+                 <div class="zl-line-right">
+                
+                    <ul>
+                      <li class="z-right" data-name="0">计 划</li> <span>&gt;</span> 
+                      <li class="z-right" data-name="0">验舱</li> <span>&gt;</span>
+                      <li class="z-right" data-name="0">开流程</li> <span>&gt;</span> 
+                      <li class="z-right" data-name="1">装船</li> <span>&gt;</span>
+                      <li class="z-right"  data-name="2">关流程</li> <span>&gt;</span>
+
+                      <li class="z-right"  data-name="2">计量化验</li> <span>&gt;</span>
+                      <li class="z-right line-last-li"  data-node="1" id="zl-line-right-eighth"></li>
+                    </ul>
+                   
+                 </div> 
+                 </div></a>
+        <div class="zl-line-bottom">
+          <img src="../images/baogao.jpg" alt="">
+        </div>
+    </div>
+    <div class="zl-line clearfix">
+        <!-- 左 -->
+        <div class="clearfix">
+       <div class="zl-line-left talk">
+          <div class="zl-line-img">
+            <img src="../images/gdf.png" alt="">
+            <span>收</span>
+          </div>
+          <div class="zl-line-zi">报 告
+          <img src="../images/q.png" alt="">
+          </div>
+       </div>
+
+        <!-- 点击使用 -->
+        <!-- 中 -->
+                <a href="overview.html">
+                 <div class="zl-line-middle">
+                   <p class="zl-line-middle-one">GSS-2017052401</p>
+                   <p class="zl-line-middle-two">2017.05.06-2017.05.08</p>
+                   <span class="zl-line-middle-three">92#,95#</span>
+                   <span class="zl-line-middle-four">700t</span>
+                 </div>
+                 <!-- 右 --> 
+
+                 <div class="zl-line-right">
+                
+                    <ul>
+                      <li class="z-right" data-name="0">计 划</li> <span>&gt;</span> 
+                      <li class="z-right" data-name="0">开下载流程</li> <span>&gt;</span>
+                      <li class="z-right" data-name="0">管输下载</li> <span>&gt;</span> 
+                      <li class="z-right" data-name="1">关下载流程</li> <span>&gt;</span>
+                      <li class="z-right"  data-name="2">计量化验</li> <span>&gt;</span>
+                      <li class="z-right line-last-li"  data-node="1" id="zl-line-right-eighth"></li>
+                    </ul>
+                   
+                 </div> 
+                 </div></a>
+        <div class="zl-line-bottom">
+          <img src="../images/baogao.jpg" alt="">
+        </div>
+    </div>
+    <div class="zl-line clearfix">
+        <!-- 左 -->
+        <div class="clearfix">
+       <div class="zl-line-left talk">
+          <div class="zl-line-img">
+            <img src="../images/gdf.png" alt="">
+            <span>发</span>
+          </div>
+          <div class="zl-line-zi">报 告
+          <img src="../images/q.png" alt="">
+          </div>
+       </div>
+
+        <!-- 点击使用 -->
+        <!-- 中 -->
+                <a href="overview.html">
+                 <div class="zl-line-middle">
+                   <p class="zl-line-middle-one">GSF-2017052401</p>
+                   <p class="zl-line-middle-two">2017.05.06-2017.05.08</p>
+                   <span class="zl-line-middle-three">92#,0#</span>
+                   <span class="zl-line-middle-four">4500t</span>
+                 </div>
+                 <!-- 右 --> 
+
+                 <div class="zl-line-right">
+                
+                    <ul>
+                      <li class="z-right" data-name="0">计 划</li> <span>&gt;</span> 
+                      <li class="z-right" data-name="0">开流程</li> <span>&gt;</span>
+                      <li class="z-right" data-name="0">送电</li> <span>&gt;</span> 
+                      <li class="z-right" data-name="1">管输发油</li> <span>&gt;</span>
+                      <li class="z-right"  data-name="2">断电</li> <span>&gt;</span>
+                      <li class="z-right"  data-name="2">关流程</li> <span>&gt;</span>
+                      <li class="z-right"  data-name="2">计量化验</li> <span>&gt;</span>
+
+                      <li class="z-right line-last-li"  data-node="1" id="zl-line-right-eighth"></li>
+                    </ul>
+                   
+                 </div> 
+                 </div></a>
+        <div class="zl-line-bottom">
+          <img src="../images/baogao.jpg" alt="">
+        </div>
+    </div>
+    <div class="zl-line clearfix">
+        <!-- 左 -->
+        <div class="clearfix">
+       <div class="zl-line-left talk">
+          <div class="zl-line-img zl-line-n">
+            <img src="../images/pw.png" alt="">
+            <span>排污</span>
+          </div>
+          <div class="zl-line-zi">报 告
+          <img src="../images/q.png" alt="">
+          </div>
+       </div>
+
+        <!-- 点击使用 -->
+        <!-- 中 -->
+                <a href="overview.html">
+                 <div class="zl-line-middle">
+                   <p class="zl-line-middle-one">PW-2017052401</p>
+                   <p class="zl-line-middle-two">2017.05.06-2017.05.08</p>
+                   <span class="zl-line-middle-three">1#过滤器</span>
+                   <span class="zl-line-middle-four">92#</span>
+                 </div>
+                 <!-- 右 --> 
+
+                 <div class="zl-line-right">
+                
+                    <ul>
+                      <li class="z-right" data-name="0">计 划</li> <span>&gt;</span> 
+                      <li class="z-right" data-name="1">排污</li> <span>&gt;</span>
+                      
+
+                      <li class="z-right line-last-li"  data-node="1" id="zl-line-right-eighth"></li>
+                    </ul>
+                   
+                 </div> 
+                 </div></a>
+        <div class="zl-line-bottom">
+          <img src="../images/baogao.jpg" alt="">
+        </div>
+    </div>
+    <div class="zl-line clearfix">
+        <!-- 左 -->
+        <div class="clearfix">
+       <div class="zl-line-left talk">
+          <div class="zl-line-img zl-line-n">
+            <img src="../images/qs.png" alt="">
+            <span>切水</span>
+          </div>
+          <div class="zl-line-zi">报 告
+          <img src="../images/q.png" alt="">
+          </div>
+       </div>
+
+        <!-- 点击使用 -->
+        <!-- 中 -->
+                <a href="overview.html">
+                 <div class="zl-line-middle">
+                   <p class="zl-line-middle-one">QS-2017052401</p>
+                   <p class="zl-line-middle-two">2017.05.06-2017.05.08</p>
+                   <span class="zl-line-middle-three">T1,92#</span>
+                   <span class="zl-line-middle-four">10mm</span>
+                 </div>
+                 <!-- 右 --> 
+
+                 <div class="zl-line-right">
+                
+                    <ul>
+                      <li class="z-right" data-name="0">计 划</li> <span>&gt;</span> 
+                      <li class="z-right" data-name="1">切水</li> <span>&gt;</span>
+                      
+
+                      <li class="z-right line-last-li"  data-node="1" id="zl-line-right-eighth"></li>
+                    </ul>
+                   
+                 </div> 
+                 </div></a>
+        <div class="zl-line-bottom">
+          <img src="../images/baogao.jpg" alt="">
+        </div>
+    </div>
+    <div class="zl-line clearfix">
+        <!-- 左 -->
+        <div class="clearfix">
+       <div class="zl-line-left talk">
+          <div class="zl-line-img zl-line-n">
+            <img src="../images/dg.png" alt="">
+            <span>倒罐</span>
+          </div>
+          <div class="zl-line-zi">报 告
+          <img src="../images/q.png" alt="">
+          </div>
+       </div>
+
+        <!-- 点击使用 -->
+        <!-- 中 -->
+                <a href="overview.html">
+                 <div class="zl-line-middle">
+                   <p class="zl-line-middle-one">DG-2017052401</p>
+                   <p class="zl-line-middle-two">2017.05.06-2017.05.08</p>
+                   <span class="zl-line-middle-three">T1,T2</span>
+                   <span class="zl-line-middle-four">500t</span>
+                 </div>
+                 <!-- 右 --> 
+
+                 <div class="zl-line-right">
+                
+                    <ul>
+                      <li class="z-right" data-name="0">计 划</li> <span>&gt;</span> 
+                      <li class="z-right" data-name="1">倒油</li> <span>&gt;</span>
+                      <li class="z-right" data-name="2">计量化验</li> <span>&gt;</span>
+                      
+
+                      <li class="z-right line-last-li"  data-node="1" id="zl-line-right-eighth"></li>
+                    </ul>
+                   
+                 </div> 
+                 </div></a>
+        <div class="zl-line-bottom">
+          <img src="../images/baogao.jpg" alt="">
+        </div>
+    </div>
+    <div class="zl-line clearfix">
+        <!-- 左 -->
+        <div class="clearfix">
+       <div class="zl-line-left talk">
+          <div class="zl-line-img zl-line-n">
+            <img src="../images/qg.png" alt="">
+            <span>清罐</span>
+          </div>
+          <div class="zl-line-zi">报 告
+          <img src="../images/q.png" alt="">
+          </div>
+       </div>
+
+        <!-- 点击使用 -->
+        <!-- 中 -->
+                <a href="overview.html">
+                 <div class="zl-line-middle">
+                   <p class="zl-line-middle-one">QG-2017052401</p>
+                   <p class="zl-line-middle-two">2017.05.06-2017.05.08</p>
+                   <span class="zl-line-middle-three">T1,92#</span>
+                   <span class="zl-line-middle-four">500t</span>
+                 </div>
+                 <!-- 右 --> 
+
+                 <div class="zl-line-right">
+                
+                    <ul>
+                      <li class="z-right" data-name="0">计 划</li> <span>&gt;</span>
+                      <li class="z-right line-last-li"  data-node="1" id="zl-line-right-eighth"></li>
+                    </ul>
+                   
+                 </div> 
+                 </div></a>
+        <div class="zl-line-bottom">
+          <img src="../images/baogao.jpg" alt="">
+        </div>
+    </div>
+
+    
+
+
+
+
+
+        
+</body>
+<script src="../uploads/selfjs/jobschedul.js"></script>
+</html>

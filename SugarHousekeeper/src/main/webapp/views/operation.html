@@ -1,0 +1,172 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>作业列表</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" type="text/css" href="../public/jquery-easyui-1.5.2/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../public/jquery-easyui-1.5.2/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="../public/jquery-easyui-1.5.2/demo/demo.css">
+    <link rel="stylesheet" type="text/css" href="../uploads/selfCss/operation.css">
+    <script type="text/javascript" src="../public/jquery-easyui-1.5.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../public/jquery-easyui-1.5.2/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../public/jquery-easyui-1.5.2/locale/easyui-lang-zh_CN.js"></script>
+
+</head>
+
+<body style="background:#f3f3f3">
+    <!-- 下拉列表、时间控件、查询 -->
+    <div class="search clearfix">
+      <div class="search-one">
+        <select class="easyui-combobox" name="state" style="width:120px;">
+            <option value="AL">铁路发油</option>
+            <option value="AK">铁路收油</option>
+            <option value="AZ">水路发油</option>
+            <option value="AR">水路收油</option>
+            <option value="AL">管输发油</option>
+            <option value="AK">管输收油</option>
+            <option value="AZ">公路发油</option>
+            <option value="AR">公路收油</option>
+           
+        </select>
+      </div>
+      <div class="search-two">
+        <input class="easyui-datebox" name="birthday"     
+        data-options="required:true,showSeconds:false" value="3/4/2010 2:3" style="width:150px"> <span>~</span>
+        </div>
+       <div class="search-three">
+        <input class="easyui-datebox" name="birthday"     
+        data-options="required:true,showSeconds:false" value="3/4/2010 2:3" style="width:150px">
+      </div>
+      <div class="search-four">
+        <select class="easyui-combobox" name="state" style="width:120px;">
+            <option value="AL">可编辑</option>
+            <option value="AK">待审批</option>
+            <option value="AZ">已签发</option>
+            <option value="AR">已完成</option>
+        </select>
+      </div>
+      <div class="search-five">
+        <button>查询</button>
+      </div> 
+    </div>
+    <!-- 新建 -->
+    <div class="newly">
+      <ul class="newly-one">
+        <li><a href="#">新建</a>
+          <ul class="newly-two">
+            <li><a href="a.html">铁路发油</a></li>
+            <li><a href="#">铁路收油</a></li>
+            <li><a href="#">水路发油</a></li>
+            <li><a href="#">水路收油</a></li>
+            <li><a href="#">管输发油</a></li>
+            <li><a href="#">管输收油</a></li>
+            <li><a href="#">公路发油</a></li>
+            <li><a href="#">公路收油</a></li>
+            <li><a href="#">排污</a></li>
+            <li><a href="#">清罐</a></li>
+            <li><a href="#">倒罐</a></li>
+            <li><a href="#">切水</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- 作业编号表格 -->
+    <div class="froms">
+          
+      <table class="easyui-datagrid" style="width:100%;"
+          data-options="singleSelect:true,collapsible:true,url:'datagrid_data1.json',method:'get'">
+        <thead>
+          <tr>
+            <th width="18%" data-options="field:'itemid',align:'center'" sortable="true">作业标号</th>
+            
+            <th width="18%" data-options="field:'productid',align:'center'" sortable="true">作业计划类型</th>
+
+            <th width="18%" data-options="field:'listprice',align:'center'" sortable="true">计划开始时间</th>
+
+            <th width="24%" data-options="field:'unitcost',align:'center'" sortable="true">主要内容</th>
+
+
+            <th width="13%" data-options="field:'people',align:'center'" sortable="true">提交人</th>
+
+            <th width="12%" data-options="field:'status',align:'center'" sortable="true">状态</th>
+          </tr> 
+        </thead>
+        <tbody width="100%" id="open">
+          <tr>
+            <td onclick="location.href='feedback.html';">TLF-201707010001</td>
+            <td>铁路发油</td>
+            <td>2010704 10:10</td>
+            <td>92# 8485t</td>
+            <td>张三</td>
+            <td>可编辑</td>
+            
+          </tr>
+          <tr>
+            <td onclick="location.href='feedback.html';">TLF-201707020001</td>
+            <td>铁路发油</td>
+            <td>2010704 10:10</td>
+            <td>92# 8485t</td>
+            <td>张三</td>
+            <td>已签发</td>
+            
+          </tr>
+          <tr>
+            <td>GSF-201707040001</td>
+            <td>管输发油</td>
+            <td>2010704 10:10</td>
+            <td>92# 8485t</td>
+            <td>张三</td>
+            <td>待审批</td>
+          </tr>
+          <tr>
+            <td>GSS-201707040002</td>
+            <td>管输收油</td>
+            <td>2010704 10:10</td>
+            <td>92# 4000t;0# 500t</td>
+            <td>张三</td>
+            <td>待审批</td>
+          </tr>
+          <tr>
+            <td>PW-201707050001</td>
+            <td>排污</td>
+            <td>2010704 10:10</td>
+            <td>1#过滤器 92#</td>
+            <td>张三</td>
+            <td>待审批</td>
+          </tr>
+          <tr>
+            <td>QG-201707050002</td>
+            <td>清罐</td>
+            <td>2010704 10:10</td>
+            <td>T4,92#</td>
+            <td>张三</td>
+            <td>待审批</td>
+          </tr>
+          <tr>
+            <td>DG-201707060001</td>
+            <td>倒罐</td>
+            <td>2010704 10:10</td>
+            <td>T4,92#</td>
+            <td>张三</td>
+            <td>待审批</td>
+          </tr>
+          <tr>
+            <td>QS-201707060002</td>
+            <td>切水</td>
+            <td>2010704 10:10</td>
+            <td>T4,92#</td>
+            <td>张三</td>
+            <td>待审批</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+        
+</body>
+<script type="text/javascript" src="../uploads/selfJs/operation.js"></script>
+</html>
